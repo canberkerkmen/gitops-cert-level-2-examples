@@ -24,6 +24,10 @@ spec:
   
   ignoreDifferences:
   - group: apps
+    kind: Secret
+    jsonPointers:
+    - /data/my-password
+  - group: apps
     kind: Deployment
     jsonPointers:
-    - /spec/replicas
+    - /metadata/annotations/creation
